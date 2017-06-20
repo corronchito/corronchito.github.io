@@ -1,0 +1,179 @@
+body{
+	height: 35vw;
+}
+
+.bgImage{
+	background-image: url("images/image1.png");
+	background-size: 90%;
+	background-repeat: no-repeat;
+}
+
+
+.nav {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+/*	border: 1px solid;*/
+	width: 10vw;
+}
+
+.nav li:first-child{
+	font-family: "Russo One", monospace;
+	font-size: 350%;
+	width: 150%;
+/*	border: 1px solid;*/
+}
+
+.nav li:nth-child(2){
+	font-family: "Lobster", cursive;
+	text-transform: lowercase;
+	font-size: 350%;
+	width: 150%;
+/*	border: 1px solid;*/
+	padding-bottom: 5px;
+}
+
+.nav li:nth-child(3){
+	font-family: "VT323", monospace;
+	font-size: 350%;
+	width: 150%;
+/*	border: 1px solid;*/
+	padding: 5px 0;
+}
+
+#work:hover{
+	background-color: #33FF00;
+	padding: 10px;
+-webkit-clip-path: polygon(3% 21%, 92% 4%, 100% 100%, 3% 78%);
+clip-path: polygon(3% 21%, 92% 4%, 100% 100%, 3% 78%);
+}
+
+#contact:hover{
+	background-color: #FFFF00;
+	padding: 10px;
+-webkit-clip-path: polygon(1% 0, 91% 31%, 86% 83%, 6% 94%);
+clip-path: polygon(1% 0, 91% 31%, 86% 83%, 6% 94%);
+}
+
+#about:hover{
+	background-color: #FF00FF;
+	padding:10px;
+-webkit-clip-path: polygon(2% 1%, 84% 46%, 55% 82%, 0 100%);
+clip-path: polygon(2% 1%, 84% 46%, 55% 82%, 0 100%);
+}
+
+.send_search{
+/*	border: 1px solid;*/
+	width: 30.5vw;
+	display: flex;
+	align-items: center;
+
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+}
+
+#inputbox{
+	flex-grow: 1;
+	height: 50px;
+	border: 5px solid;
+}
+
+ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 	display: flex;
+ 	flex-wrap: wrap;
+	text-transform: uppercase;
+	font-family: "Futura", sans-serif;
+	font-style: italic;
+/*	background-color: tomato;*/
+	color: plum;
+}
+
+}
+
+.buttons {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-grow: 1;
+/*	border: 1px solid;*/
+
+}
+
+.buttons button{
+	display:flex;
+	font-family: "Shrikhand", cursive;
+	background-color: #33FFFF;
+	font-size: 16px;
+	border: none;
+	margin: 3px;
+}
+
+/*h1{
+	font-family: "arial black", sans-serif;
+	font-size: 150%;
+}*/
+
+.random{
+	height: 35vw;	
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+/*	border: 1px solid;*/
+}
+
+.random button{
+	height: 100px;
+	width: 70px;
+/*	border: none;*/
+	background:none;
+/*	background-color: #FF00FF;*/
+	-webkit-clip-path: polygon(27% 19%, 94% 0, 94% 94%, 0% 100%);
+	clip-path: polygon(27% 19%, 94% 0, 94% 94%, 0% 100%);
+	text-shadow: 4px 4px 2px rgba(0,0,0, 0.7);
+/*	animation: rotate_random 60s infinite;*/
+
+}
+
+#random_button{
+	font-family: "arial black", sans-serif;
+	font-size: 470%;
+}
+
+@keyframes rotate_random{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+@keyframes change_color{
+	0%{color:#FF00FF;}
+	25%{color:#ffff02;}
+	50%{color: #3fff0a;}
+	100%{color: #00ffdd;}
+}
+
+.animate1{
+	animation: shakeit 0.1s infinite alternate;
+}
+.animate2{
+	animation: shakeit 0.1s infinite alternate;
+}
+.animate3{
+	animation: shakeit 0.1s infinite alternate;
+}
+
+@keyframes shakeit{
+	0% {margin-left: 0;
+		transform: rotate(10deg);}
+	25%{margin-left: 1px;}
+	50%{margin-left: 5px;}
+	100%{margin-left: 10px
+		 transform: rotate(-10deg);}
+}
+
+
+
+
