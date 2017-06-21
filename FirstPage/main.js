@@ -3,8 +3,10 @@
 var hoverTimeout;
 var hoverTimeout2;
 var hoverTimeout3;
-var images = new Array ("image1", "image2","image3", "image4","image5", "image6", "image7");
+var images = new Array ("image1", "image2","image3", "image4","image5", "image6", "image7","image8", "image9", "image10", "image11");
+var VerticalImages = new Array ("vertical1","vertical2","vertical3","vertical4","vertical5","vertical6","vertical7","vertical8","vertical9","vertical10", "vertical11");
 var length = images.length;
+var mq = window.matchMedia( "(min-width: 800px)" );
 
 
 $("#work").hover(function() {
@@ -50,13 +52,19 @@ $("#random_button").click(function(){
 	// $(".bgImage").css("background-size", "150%");
 	// $(".bgImage").css("background-position", "center");
 
+	if (mq.matches){
 	// get random image name
-	var randImg = images[ Math.floor ( Math.random() * images.length ) ];
-	$(".bgImage").css("background-image", "url(images/"+ randImg +  ".png)" );
-	$(".bgImage").css("background-size", "100vw");
-	$(".bgImage").css("background-position", "center");
+		var randImg = images[ Math.floor ( Math.random() * images.length ) ];
+		$(".bgImage").css("background-image", "url(images/"+ randImg +  ".png)" );
+	// $(".bgImage").css("background-size", "100vw");
+	//$(".bgImage").css("background-position", "center center");
+	}else{
+		var randImgVertical = VerticalImages[Math.floor(Math.random()*VerticalImages.length)];
+		$(".bgImage").css("background-image", "url(images/"+ randImgVertical + ".png)");
+	}	
 //}
 });
+
 
 
 
