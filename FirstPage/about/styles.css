@@ -90,15 +90,16 @@ p{
 }*/
 
 .hoveringOverlay {
-	animation: text_disappear 15s alternate;
+	animation: text_disappear 15s alternate forwards;
 }
 
 .hoveringOverlay2 {
-	animation: text_disappear 25s alternate;
+	animation: text_disappear 25s alternate forwards;
 }
 
 .hoveringBio {
 	text-decoration: underline;
+	animation: shadow_appear 20s alternate forwards;
 }
 
 .backSlow {
@@ -147,6 +148,10 @@ p{
 	to {color: rgba(0,0,0,0);}
 }
 
+@keyframes shadow_appear{
+	from {text-shadow: 2px 2px rgba(255,255,255,0);}
+	to{text-shadow: 2px 2px rgba(255,255,255,0.5);}
+}
 
 .image{
 	height: 50vw;
