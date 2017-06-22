@@ -1,10 +1,22 @@
-//when hover on one image, dark filter on all others
-$(".grid > div").hover(function(){
-	$(".grid>div:not(:hover)").addClass("darken");
+// //when hover on one image, dark filter on all others
+// $(".thumbnail").hover(function(){
+// 	$(".thumbnail:not(:hover)").addClass("darken");
+// 	$(".thumbnail").not(":hover").addClass("tinymargin")
+// 	console.log("hovering");
+
+// });
+
+$(".thumbnail").mouseover(function(){
+	$(".thumbnail").addClass("darken");
+	// $(".thumbnail").addClass("tinymargin");
+	$(this).removeClass("darken");
+	// $(this).removeClass("tinymargin");
 	console.log("hovering");
 });
 
-$(".grid>div").mouseleave(function(){
-	$(".grid>div").removeClass("darken");
-	console.log("not hovering");
-});
+ $(".thumbnail").mouseleave(function(){
+ 	$(".thumbnail").removeClass("darken");
+	// $(".thumbnail").removeClass("tinymargin");
+// 	$(".thumbnail").removeClass("darken");
+// 	console.log("not hovering");
+ });

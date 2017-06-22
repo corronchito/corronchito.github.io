@@ -12,19 +12,28 @@ a{
 	font-family: "VT323", monospace;
 	font-size: 18px;
 	width: 30vw;
-	height: 100vh;
+	height: 70vh;
 	padding: 0;
-	margin: 0;
-	position: absolute;
-	background-image: url("images/noise.gif");
-	-webkit-clip-path: polygon(0 0, 70% 0, 100% 94%, 0 88%);
-		clip-path: polygon(0 0, 70% 0, 100% 94%, 0 88%);
-	line-height: 130%;
+	margin-top: 10vh;
+	position: absolute;	
+	overflow: scroll;
+/*	position: fixed;*/
 /*		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 */
 
+}
+
+
+.scroll_container{
+	width: 30vw;
+	height: 130vh;
+	background-image: url("images/noise.gif");
+	-webkit-clip-path: polygon(0 0, 73% 0, 100% 68%, 0 62%);
+		clip-path: polygon(0 0, 73% 0, 100% 68%, 0 62%);
+	line-height: 130%;
+	position: fixed;
 }
 
 .nav li:first-child{
@@ -33,26 +42,34 @@ a{
 	text-transform: uppercase;
 	color: #999999;
 	text-shadow: -6px 10px black;
-	background-color: #999999;
-	margin: 5px 4vw 5vh 4vw;
+/*	background-color: #999999;*/
+	margin: -65px 4vw 5vh 4vw;
 	padding-bottom: 10px;
 	line-height: 50%;
 	height: 5vh;
+	position: fixed;
+}
+
+#werk{
+	background-color: #999999;
+	color: #999999;
+	margin-bottom: 5vw;
+
 }
 
 #ejsvm{
 	word-spacing: 2px;
 }
 
-nav li{
+nav a{
 	display: inline-block;
 	background-color: rgba(51,255,51, 0.5);
 	margin: 5px;
 	padding-top: 5px;
-	color: #999999;
+/*	color: #999999;*/
 }
 
-nav li:hover{
+nav a:hover{
 	background-color: rgba(51,255,51,1);
 	color: black;
 }
@@ -67,12 +84,13 @@ nav li:hover{
 	position: relative;
 	margin-left: 22vw;
 	color: #999999;
+	position: fixed;
 }
 
 .nav_organize li:first-child{
 	font-family: "Shrikhand", cursive;
 	text-transform: uppercase;
-	line-height: 90%;
+	line-height: 100%;
 	margin-top: 5px;
 }
 
@@ -88,7 +106,7 @@ nav li:hover{
 	text-transform: uppercase;
 }
 
-.nav_organize li:hover{
+.nav_organize a:hover{
 	background-color: #fff000;
 	color: black;
 }
@@ -114,7 +132,7 @@ nav li:hover{
 	font-size: 2em;
 }
 
-.contact_about li:hover{
+.contact_about a:hover{
 	background-color: #fff000;
 	color: black;
 }
@@ -139,31 +157,41 @@ nav li:hover{
 	justify-content: space-around;
 }
 
-.grid div:hover{
+.thumbnail:hover{
 	width: 300px;
-	height: 195px;
+	height: 180px;
 	margin: 0;
 }
 
-.grid div{
+.thumbnail{
 	margin: 3vw;
 	background-color: rgba(0,0,0,0.7);
 /*	border: 1px solid red;*/
 	width: 150px;
 	height: 95px;
-	transition: width 1s, height 1s;
+	transition: width 1s, height 1s, margin 1s;
 /*	width: 10vw;
 	height: 10vh;*/
 }
 
+.tinymargin{
+	margin: 0px;
+/*	//animation: short 1s forwards alternate;
+*/}
+
 .darken{
-	animation: darkening 0.5s alternate infinite;
-	z-index:10;
+	animation: darkening 1s forwards alternate;
+/*	border: 1px solid red;*/
+}
+
+@keyframes short{
+	from{margin: 3vw;}
+	to{margin: 0px;}
 }
 
 @keyframes darkening{
-	from{background-color: rgba(0,0,0,0);}
-	to{background-color: rgba(0,0,0,0.5);}
+	from{filter: brightness(100%);}
+	to{filter: brightness(20%););}
 }
 
 #softinterface{
@@ -203,10 +231,12 @@ nav li:hover{
 
 #nonnewtonian{
 	background-image: url("images/image8.png");
-	background-size: 100%;
+	background-size: 103%;
+	background-position: center;
 }
 
 #vendingmachine{
 	background-image: url("images/image9.png");
-	background-size: 100%;
+	background-size: 103%;
+		background-position: center;
 }
