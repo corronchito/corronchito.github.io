@@ -1,50 +1,66 @@
+  @font-face {
+	font-family: 'FeniceOblique';
+	src: url('fonts/FeniceStd-Oblique.otf');
+  }
+
+*{
+	margin: 0;
+	padding:0;
+}
 body{
 	background-image: url("images/fire.gif");
 	background-size: 100%;
 	position: relative;
-	margin: 0;
-	padding:0;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	opacity: 0.5;
 }
 
 #carlotta_aoun{
-/*	font-family: "Arial Black";*/
 	font-weight: bolder;
-/*	font-size: 300%;*/
-	font-size: 200%;
+	margin: auto;
+	font-size: 8vw;
 	text-align: center;
-	color: rgb(0,0,0);
-	font-family: "Orbitron", sans-serif;
-	font-weight: 900;
-/*	padding: 2vw 10vw 2vw 2vw;*/
+	font-family: "Arial Black", sans-serif;
+	opacity: 0.9;
+	text-shadow: 8px 8px 7px orangered;
 }
 
+
 .contact{
-	padding: 0 1% 0 1%;
-	margin: 0 1% 0 1%;
-	text-align: center;
-	display: inline-block;
-	font-family: "Lobster", cursive;
+	padding: auto;
+	margin: auto;
+	font-family: "FeniceOblique", "Futura", cursive;
+	font-weight: bold;
 	font-size: 2vw;
-	text-decoration: overline;
-	
+	text-align: center;
 }
 
 .contact_container{
-	font-family: "Lobster", "Futura", sans-serif;
 	background-image: url("images/water.gif");
 	background-repeat:no-repeat;
 	background-size: 100%;
 	width: 100vw;
-/*	height: 3vw;*/
 	padding-top: 3vw;
 	padding-bottom: 3vw;
-	text-align: center;
-	/*display: flex;*/
-	overflow: auto;
-	font-style: italic;
-/*	text-transform: uppercase;*/
-	font-weight: bold;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+}
 
+.contact-block{
+	display:block;
+}
+
+.contact-header{
+	font-family: Arial Black, Helvetica, sans-serif;
+	margin-bottom: 10px;
 }
 
 .bio-container{
@@ -57,41 +73,34 @@ body{
 	padding: 0 3vw 0 3vw;
 	text-decoration: line-through;
 	position: relative;
-	/*overflow:hidden;*/
 }
 
-/*.bio:hover {
-	text-decoration: underline;
-
-}*/
 
 p{
-/*	font-family: "Quantico", "Roboto", sans-serif;*/
-	font-family: "VT323", monospace;
+	font-family: "VT323", "Roboto", monospace;
 	font-weight: 400;
 	font-size: 80%;
 	letter-spacing: 10px;
-
+	line-height: 1.6;
 }
 
 .overlay_text{
-	font-family: "Russo One", sans-serif;
+	/* font-family: "Russo One", sans-serif; */	
+	font-family: Arial Black, sans-serif;
 	text-decoration: none;
 	font-size: 400%;
 	margin: 1vw 5vw 20vw 0vw;
 	position: absolute;
 	transition: color 20s;
 	line-height: 15vw;
-/*	border: 5px solid;*/
+	text-align: justify;
+	text-justify: inter-character;
+	/* border: 5px solid; */
 }
 
-/*.overlay_text:hover {
-	color: rgba(0,0,0,0);
-}*/
-
-.hoveringOverlay {
+/* .hoveringOverlay {
 	animation: text_disappear 15s alternate forwards;
-}
+} */
 
 .hoveringOverlay2 {
 	animation: text_disappear 25s alternate forwards;
@@ -101,10 +110,10 @@ p{
 	text-decoration: underline;
 	animation: shadow_appear 20s alternate forwards;
 }
-
+/* 
 .backSlow {
 	animation: text_disappear 15s reverse;
-}
+} */
 
 
 @media (min-width: 600px){
@@ -170,9 +179,8 @@ p{
 }
 
 .portfolio_link{
-	font-family: "Lobster", cursive;
+	font-family: "FeniceOblique", "Futura", cursive;
 	font-size: 2vw;
-	background-image: url("images/water.gif");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	position: relative;
@@ -185,7 +193,8 @@ p{
 	width: 100vw;
 	text-align: center;
 	padding: 2vw 0 0 0;
-	z-index: -1;
+	background-image: url("images/water.gif");
+	z-index: 1;
 }
 
 /*.vertical_bar{
